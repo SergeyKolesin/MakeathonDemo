@@ -23,6 +23,7 @@
 		FE46426F2226C06D00784ADE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE46426E2226C06D00784ADE /* LocationManager.swift */; };
 		FE4642752226C25600784ADE /* ChooseShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4642742226C25600784ADE /* ChooseShopViewController.swift */; };
 		FE4642772226D14D00784ADE /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4642762226D14D00784ADE /* Alert.swift */; };
+		FE4642792226D54100784ADE /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4642782226D54100784ADE /* CommentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		FE46426E2226C06D00784ADE /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		FE4642742226C25600784ADE /* ChooseShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseShopViewController.swift; sourceTree = "<group>"; };
 		FE4642762226D14D00784ADE /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		FE4642782226D54100784ADE /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				FE4642742226C25600784ADE /* ChooseShopViewController.swift */,
 				FE4642632226AB1300784ADE /* ChooseTopicViewController.swift */,
 				FE04756622244AE9006916C5 /* QualityRateViewController.swift */,
+				FE4642782226D54100784ADE /* CommentViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				FE04756722244AE9006916C5 /* QualityRateViewController.swift in Sources */,
 				FE04753C222445FE006916C5 /* MakeathonDemo.xcdatamodeld in Sources */,
 				FE4642692226ABD600784ADE /* QualityLevel.swift in Sources */,
+				FE4642792226D54100784ADE /* CommentViewController.swift in Sources */,
 				FE4642772226D14D00784ADE /* Alert.swift in Sources */,
 				FE4642672226AB9000784ADE /* Topic.swift in Sources */,
 				FE46426F2226C06D00784ADE /* LocationManager.swift in Sources */,

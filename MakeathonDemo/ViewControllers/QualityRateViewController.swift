@@ -32,6 +32,19 @@ class QualityRateViewController: UIViewController {
         titleLabel.text = titleString
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showCommentVC" {
+            guard let vc = segue.destination as? CommentViewController else {
+                return
+            }
+            guard let value = sender as? Int else {
+                return
+            }
+            vc.shop = shop
+            vc.value = value
+            vc.topicUuid = topic.uuid
+        }
+    }
 }
 
 extension QualityRateViewController: UITableViewDataSource {
@@ -51,7 +64,8 @@ extension QualityRateViewController: UITableViewDelegate {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.isSelected = false
         Alert.showCommentAlert(in: self, positiveBlock: { [weak self] in
-            
+            guard let strongSelf = self else {return}
+            strongSelf.performSegue(withIdentifier: "showCommentVC", sender: strongSelf.topic.qualityLevels[indexPath.row].qualityLevelGrade)
         }, negativeBlock: { [weak self] in
             guard let strongSelf = self else {return}
             NetworkManager.postFeedback(entityName: strongSelf.shop, topicUuid: strongSelf.topic.uuid, qualityLevelGrade: strongSelf.topic.qualityLevels[indexPath.row].qualityLevelGrade, comment: nil, completion: { (_, error) in

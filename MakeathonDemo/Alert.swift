@@ -37,7 +37,7 @@ class Alert {
         let alert = UIAlertController(title: titleString, message: "", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
             print("OK")
-            presenter.navigationController?.popToRootViewController(animated: false)
+            presenter.navigationController?.popToRootViewController(animated: true)
         }))
         presenter.present(alert, animated: true, completion: nil)
     }
