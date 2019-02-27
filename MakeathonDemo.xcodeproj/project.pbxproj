@@ -159,8 +159,7 @@
 				FE4642612226938300784ADE /* NetworkManager.swift */,
 				FE46426E2226C06D00784ADE /* LocationManager.swift */,
 			);
-			name = Managers;
-			path = "New Group";
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
