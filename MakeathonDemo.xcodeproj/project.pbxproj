@@ -20,6 +20,7 @@
 		FE4642642226AB1300784ADE /* ChooseTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4642632226AB1300784ADE /* ChooseTopicViewController.swift */; };
 		FE4642672226AB9000784ADE /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4642662226AB9000784ADE /* Topic.swift */; };
 		FE4642692226ABD600784ADE /* QualityLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4642682226ABD600784ADE /* QualityLevel.swift */; };
+		FE46426F2226C06D00784ADE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE46426E2226C06D00784ADE /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		FE4642632226AB1300784ADE /* ChooseTopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTopicViewController.swift; sourceTree = "<group>"; };
 		FE4642662226AB9000784ADE /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		FE4642682226ABD600784ADE /* QualityLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualityLevel.swift; sourceTree = "<group>"; };
+		FE46426E2226C06D00784ADE /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		FE047532222445FE006916C5 /* MakeathonDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FE4642702226C07C00784ADE /* Managers */,
 				FE4642652226AB7800784ADE /* Model */,
 				FE047533222445FE006916C5 /* AppDelegate.swift */,
 				FE047537222445FE006916C5 /* Main.storyboard */,
@@ -119,7 +122,6 @@
 				FE04756422244649006916C5 /* LoginViewController.swift */,
 				FE4642632226AB1300784ADE /* ChooseTopicViewController.swift */,
 				FE04756622244AE9006916C5 /* QualityRateViewController.swift */,
-				FE4642612226938300784ADE /* NetworkManager.swift */,
 			);
 			path = MakeathonDemo;
 			sourceTree = "<group>";
@@ -149,6 +151,16 @@
 				FE4642682226ABD600784ADE /* QualityLevel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FE4642702226C07C00784ADE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FE4642612226938300784ADE /* NetworkManager.swift */,
+				FE46426E2226C06D00784ADE /* LocationManager.swift */,
+			);
+			name = Managers;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +302,7 @@
 				FE04753C222445FE006916C5 /* MakeathonDemo.xcdatamodeld in Sources */,
 				FE4642692226ABD600784ADE /* QualityLevel.swift in Sources */,
 				FE4642672226AB9000784ADE /* Topic.swift in Sources */,
+				FE46426F2226C06D00784ADE /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
