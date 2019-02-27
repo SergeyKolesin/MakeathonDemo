@@ -11,13 +11,26 @@ import UIKit
 class QualityRateViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var titleLabel: UILabel!
     
-    var topic: Topic!
+    static let titleLabelString = "Пожалуйста, оцените %@"
+    var titleString: String?
+    
+    var topic: Topic! {
+        didSet {
+            titleString = String(format:QualityRateViewController.titleLabelString, topic.name)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        titleLabel.text = titleString
+    }
+    
 }
 
 extension QualityRateViewController: UITableViewDataSource {

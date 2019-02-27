@@ -137,7 +137,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Je2-tT-0RN"/>
                     </view>
-                    <navigationItem key="navigationItem" id="bzF-IA-xbf"/>
+                    <navigationItem key="navigationItem" id="bzF-IA-xbf">
+                        <barButtonItem key="leftBarButtonItem" title="Log out" id="yd3-Wb-LYQ">
+                            <connections>
+                                <action selector="pressLogout:" destination="cxw-lf-nhq" id="Csv-h5-bwu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="njZ-7Y-LJA" id="O9I-g5-whh"/>
                         <segue destination="Nvl-12-HdM" kind="show" identifier="showQualityRateVC" id="wpJ-OV-gHK"/>
@@ -215,6 +221,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Ph4-2g-NJL" id="9Lv-iU-aH0"/>
+                        <outlet property="titleLabel" destination="Cbz-UL-8qR" id="4eb-hD-m26"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckN-Zw-ap6" userLabel="First Responder" sceneMemberID="firstResponder"/>

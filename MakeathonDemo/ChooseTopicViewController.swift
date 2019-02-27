@@ -36,10 +36,7 @@ class ChooseTopicViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showQualityRateVC" {
-            guard let nav = segue.destination as? UINavigationController else {
-                return
-            }
-            guard let vc = nav.viewControllers.first as? QualityRateViewController else {
+            guard let vc = segue.destination as? QualityRateViewController else {
                 return
             }
             guard let topic = sender as? Topic else {
@@ -48,6 +45,11 @@ class ChooseTopicViewController: UIViewController {
             vc.topic = topic
         }
     }
+    
+    @IBAction func pressLogout(_ sender: Any) {
+        navigationController?.dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 extension ChooseTopicViewController: UITableViewDataSource {
