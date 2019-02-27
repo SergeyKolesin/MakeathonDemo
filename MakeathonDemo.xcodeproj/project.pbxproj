@@ -21,6 +21,7 @@
 		FE4642672226AB9000784ADE /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4642662226AB9000784ADE /* Topic.swift */; };
 		FE4642692226ABD600784ADE /* QualityLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4642682226ABD600784ADE /* QualityLevel.swift */; };
 		FE46426F2226C06D00784ADE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE46426E2226C06D00784ADE /* LocationManager.swift */; };
+		FE4642752226C25600784ADE /* ChooseShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4642742226C25600784ADE /* ChooseShopViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		FE4642662226AB9000784ADE /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		FE4642682226ABD600784ADE /* QualityLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualityLevel.swift; sourceTree = "<group>"; };
 		FE46426E2226C06D00784ADE /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		FE4642742226C25600784ADE /* ChooseShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseShopViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				FE04756422244649006916C5 /* LoginViewController.swift */,
+				FE4642742226C25600784ADE /* ChooseShopViewController.swift */,
 				FE4642632226AB1300784ADE /* ChooseTopicViewController.swift */,
 				FE04756622244AE9006916C5 /* QualityRateViewController.swift */,
 			);
@@ -302,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE04756522244649006916C5 /* LoginViewController.swift in Sources */,
+				FE4642752226C25600784ADE /* ChooseShopViewController.swift in Sources */,
 				FE4642642226AB1300784ADE /* ChooseTopicViewController.swift in Sources */,
 				FE047534222445FE006916C5 /* AppDelegate.swift in Sources */,
 				FE4642622226938300784ADE /* NetworkManager.swift in Sources */,

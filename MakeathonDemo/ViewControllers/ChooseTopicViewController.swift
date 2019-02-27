@@ -12,10 +12,13 @@ class ChooseTopicViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var titleLabel: UILabel!
+    var shop: String!
     var topics = [Topic]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleLabel.text = shop
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,14 +45,10 @@ class ChooseTopicViewController: UIViewController {
             guard let topic = sender as? Topic else {
                 return
             }
+            vc.shop = shop
             vc.topic = topic
         }
     }
-    
-    @IBAction func pressLogout(_ sender: Any) {
-        navigationController?.dismiss(animated: true, completion: nil)
-    }
-    
 }
 
 extension ChooseTopicViewController: UITableViewDataSource {

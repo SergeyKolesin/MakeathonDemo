@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        print(LocationManager.shared.coordinate.latitude)
+        print(LocationManager.shared.coordinate.longitude)
         return true
     }
 

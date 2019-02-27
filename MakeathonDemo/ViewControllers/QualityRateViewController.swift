@@ -12,13 +12,14 @@ class QualityRateViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var titleLabel: UILabel!
+    var shop: String!
     
-    static let titleLabelString = "Пожалуйста, оцените %@"
+    static let titleLabelString = "Пожалуйста, оцените %@ в магазине '%@'"
     var titleString: String?
     
     var topic: Topic! {
         didSet {
-            titleString = String(format:QualityRateViewController.titleLabelString, topic.name)
+            titleString = String(format:QualityRateViewController.titleLabelString, topic.name.lowercased(), shop)
         }
     }
     
@@ -49,8 +50,15 @@ extension QualityRateViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.isSelected = false
-        NetworkManager.postFeedback(qualityLevelGrade: indexPath.row + 1, topicUuid: "blabla", latitude: -33.73, longitude: 151.25) { (date, error) in
-            DispatchQueue.main.async {
+        
+        
+        let alert = UIAlertController(title: "Хотите оставить комментарий?", message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "YES", style: .default, handler: { (_) in
+            print("YES")
+        }))
+        alert.addAction(UIAlertAction(title: "NO", style: .default, handler: { (_) in
+            print("NO")
+            NetworkManager.postFeedback(entityName: self.shop, topicUuid: self.topic.uuid, qualityLevelGrade: self.topic.qualityLevels[indexPath.row].qualityLevelGrade, comment: nil, completion: { (_, error) in
                 var titleString: String
                 if let error = error {
                     titleString = "Error: \(error.localizedDescription)"
@@ -62,7 +70,8 @@ extension QualityRateViewController: UITableViewDelegate {
                     print("OK")
                 }))
                 self.present(alert, animated: true, completion: nil)
-            }
-        }
+            })
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 }
