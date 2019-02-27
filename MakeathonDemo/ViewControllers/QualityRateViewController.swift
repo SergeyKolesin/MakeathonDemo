@@ -50,28 +50,13 @@ extension QualityRateViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.isSelected = false
-        
-        
-        let alert = UIAlertController(title: "Хотите оставить комментарий?", message: "", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "YES", style: .default, handler: { (_) in
-            print("YES")
-        }))
-        alert.addAction(UIAlertAction(title: "NO", style: .default, handler: { (_) in
-            print("NO")
-            NetworkManager.postFeedback(entityName: self.shop, topicUuid: self.topic.uuid, qualityLevelGrade: self.topic.qualityLevels[indexPath.row].qualityLevelGrade, comment: nil, completion: { (_, error) in
-                var titleString: String
-                if let error = error {
-                    titleString = "Error: \(error.localizedDescription)"
-                } else {
-                    titleString = "Спасибо за оценку!"
-                }
-                let alert = UIAlertController(title: titleString, message: "", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
-                    print("OK")
-                }))
-                self.present(alert, animated: true, completion: nil)
+        Alert.showCommentAlert(in: self, positiveBlock: { [weak self] in
+            
+        }, negativeBlock: { [weak self] in
+            guard let strongSelf = self else {return}
+            NetworkManager.postFeedback(entityName: strongSelf.shop, topicUuid: strongSelf.topic.uuid, qualityLevelGrade: strongSelf.topic.qualityLevels[indexPath.row].qualityLevelGrade, comment: nil, completion: { (_, error) in
+                Alert.showFeedbackAlert(in: strongSelf, error: error)
             })
-        }))
-        self.present(alert, animated: true, completion: nil)
+        })
     }
 }

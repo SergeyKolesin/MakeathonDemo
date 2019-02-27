@@ -22,6 +22,7 @@
 		FE4642692226ABD600784ADE /* QualityLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4642682226ABD600784ADE /* QualityLevel.swift */; };
 		FE46426F2226C06D00784ADE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE46426E2226C06D00784ADE /* LocationManager.swift */; };
 		FE4642752226C25600784ADE /* ChooseShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4642742226C25600784ADE /* ChooseShopViewController.swift */; };
+		FE4642772226D14D00784ADE /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4642762226D14D00784ADE /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		FE4642682226ABD600784ADE /* QualityLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualityLevel.swift; sourceTree = "<group>"; };
 		FE46426E2226C06D00784ADE /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		FE4642742226C25600784ADE /* ChooseShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseShopViewController.swift; sourceTree = "<group>"; };
+		FE4642762226D14D00784ADE /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		FE047532222445FE006916C5 /* MakeathonDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FE4642762226D14D00784ADE /* Alert.swift */,
 				FE4642732226C20800784ADE /* ViewControllers */,
 				FE4642702226C07C00784ADE /* Managers */,
 				FE4642652226AB7800784ADE /* Model */,
@@ -312,6 +315,7 @@
 				FE04756722244AE9006916C5 /* QualityRateViewController.swift in Sources */,
 				FE04753C222445FE006916C5 /* MakeathonDemo.xcdatamodeld in Sources */,
 				FE4642692226ABD600784ADE /* QualityLevel.swift in Sources */,
+				FE4642772226D14D00784ADE /* Alert.swift in Sources */,
 				FE4642672226AB9000784ADE /* Topic.swift in Sources */,
 				FE46426F2226C06D00784ADE /* LocationManager.swift in Sources */,
 			);
