@@ -111,6 +111,7 @@
 		FE047532222445FE006916C5 /* MakeathonDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FE4642722226C15400784ADE /* ViewController */,
 				FE4642702226C07C00784ADE /* Managers */,
 				FE4642652226AB7800784ADE /* Model */,
 				FE047533222445FE006916C5 /* AppDelegate.swift */,
@@ -119,9 +120,6 @@
 				FE04753F22244601006916C5 /* LaunchScreen.storyboard */,
 				FE04754222244601006916C5 /* Info.plist */,
 				FE04753A222445FE006916C5 /* MakeathonDemo.xcdatamodeld */,
-				FE04756422244649006916C5 /* LoginViewController.swift */,
-				FE4642632226AB1300784ADE /* ChooseTopicViewController.swift */,
-				FE04756622244AE9006916C5 /* QualityRateViewController.swift */,
 			);
 			path = MakeathonDemo;
 			sourceTree = "<group>";
@@ -159,8 +157,17 @@
 				FE4642612226938300784ADE /* NetworkManager.swift */,
 				FE46426E2226C06D00784ADE /* LocationManager.swift */,
 			);
-			name = Managers;
-			path = "New Group";
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		FE4642722226C15400784ADE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FE04756422244649006916C5 /* LoginViewController.swift */,
+				FE4642632226AB1300784ADE /* ChooseTopicViewController.swift */,
+				FE04756622244AE9006916C5 /* QualityRateViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
