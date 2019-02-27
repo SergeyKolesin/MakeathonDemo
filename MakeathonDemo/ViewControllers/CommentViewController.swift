@@ -17,6 +17,7 @@ class CommentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        commentTextField.delegate = self
     }
     
     @IBAction func pressSendFeedback(_ sender: Any) {
@@ -24,5 +25,12 @@ class CommentViewController: UIViewController {
         NetworkManager.postFeedback(entityName: shop, topicUuid: topicUuid, qualityLevelGrade: value, comment: commentTextField.text) { (_, error) in
             Alert.showFeedbackAlert(in: self, error: error)
         }
+    }
+}
+
+extension CommentViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
