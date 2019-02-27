@@ -21,7 +21,14 @@ class ChooseShopViewController: UIViewController {
     }
     
     @IBAction func pressLogout(_ sender: Any) {
+        logout()
         navigationController?.dismiss(animated: true, completion: nil)
+    }
+    
+    func logout() {
+        UserDefaults.standard.removeObject(forKey: "username")
+        UserDefaults.standard.removeObject(forKey: "password")
+        UserDefaults.standard.synchronize()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -42,4 +42,12 @@ class Alert {
         presenter.present(alert, animated: true, completion: nil)
     }
     
+    class func showLoginErrorAlert(in presenter: UIViewController) {
+        let alert = UIAlertController(title: "Неверный логин или пароль", message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
+            print("OK")
+        }))
+        presenter.present(alert, animated: true, completion: nil)
+    }
+    
 }

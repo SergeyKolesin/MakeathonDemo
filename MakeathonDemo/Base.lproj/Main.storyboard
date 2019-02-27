@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Yr-WG-lSi">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Yr-WG-lSi">
                                 <rect key="frame" x="20" y="40" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -44,7 +44,7 @@
                                         <rect key="frame" x="177.5" y="313.5" width="20" height="20"/>
                                     </activityIndicatorView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="lP2-1j-AcQ" firstAttribute="centerY" secondItem="Cv2-MT-DUE" secondAttribute="centerY" id="6va-Qa-Fsz"/>
                                     <constraint firstItem="lP2-1j-AcQ" firstAttribute="centerX" secondItem="Cv2-MT-DUE" secondAttribute="centerX" id="IaR-fI-QAt"/>
@@ -69,6 +69,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="blockView" destination="Cv2-MT-DUE" id="oIf-8b-7wy"/>
+                        <outlet property="passwordTextField" destination="B7m-7u-laq" id="8q3-Ww-gdO"/>
+                        <outlet property="usernameTextField" destination="3Yr-WG-lSi" id="TLg-2Z-0tN"/>
                         <segue destination="H2e-la-YJv" kind="show" identifier="showTopicNavVC" id="Jrp-mX-sbw"/>
                     </connections>
                 </viewController>
