@@ -14,7 +14,7 @@ class QualityRateViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     var shop: String!
     
-    static let titleLabelString = "Пожалуйста, оцените %@ в магазине '%@'"
+    static let titleLabelString = "Пожалуйста, оцените %@ на '%@'"
     var titleString: String?
     
     var topic: Topic! {

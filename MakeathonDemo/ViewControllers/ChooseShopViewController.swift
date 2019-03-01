@@ -13,7 +13,7 @@ class ChooseShopViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    let shops: [String] = ["Пятерочка", "Ашан", "Магнит"]
+    let shops: [String] = ["Родионова 23", "Родионова 23а"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
